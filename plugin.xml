@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            id="com.sab.training.rcp.demo.texteditor.project"
+            name="com.sab.training.rcp.demo.texteditor.project"
+            base-type="org.eclipse.core.runtime.text"
+            file-extensions="project">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editorContentTypeBinding
+            contentTypeId="com.sab.training.rcp.demo.texteditor.project"
+            editorId="org.eclipse.ui.genericeditor.GenericEditor">
+      </editorContentTypeBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.presentationReconcilers">
+      <presentationReconciler
+            class="com.sab.training.rcp.demo.texteditor.ProjectPresentationReconciler"
+            contentType="com.sab.training.rcp.demo.texteditor.project">
+      </presentationReconciler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.hoverProviders">
+      <hoverProvider
+            class="com.sab.training.rcp.demo.texteditor.ProjectHoverProvider"
+            contentType="com.sab.training.rcp.demo.texteditor.project">
+      </hoverProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.contentAssistProcessors">
+      <contentAssistProcessor
+            class="com.sab.training.rcp.demo.texteditor.ProjectContentAssistProcessor"
+            contentType="com.sab.training.rcp.demo.texteditor.project">
+      </contentAssistProcessor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.autoEditStrategies">
+      <autoEditStrategy
+            class="com.sab.training.rcp.demo.texteditor.ProjectAutoEditStrategy"
+            contentType="com.sab.training.rcp.demo.texteditor.project">
+      </autoEditStrategy>
+   </extension>
+   <extension
+         point="org.eclipse.ui.genericeditor.reconcilers">
+      <reconciler
+            class="com.sab.training.rcp.demo.texteditor.ProjectReconciler"
+            contentType="com.sab.training.rcp.demo.texteditor.project">
+      </reconciler>
+   </extension>
+   <extension
+         point="org.eclipse.core.filebuffers.documentSetup">
+      <participant
+            class="com.sab.training.rcp.demo.texteditor.ValidatorDocumentSetupParticipant"
+            contentTypeId="com.sab.training.rcp.demo.texteditor.project"
+            extensions="project">
+      </participant>
+   </extension>
+
+</plugin>

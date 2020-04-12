@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Texteditor
+Bundle-SymbolicName: com.sab.training.rcp.demo.texteditor;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SAB
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.genericeditor,
+ org.eclipse.core.filebuffers,
+ org.eclipse.core.resources
+Automatic-Module-Name: com.sab.training.rcp.demo.texteditor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
